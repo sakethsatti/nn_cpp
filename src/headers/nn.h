@@ -13,7 +13,7 @@ class NeuralNetwork {
     Eigen::VectorXd grad_mse(const Eigen::VectorXd& y, const Eigen::VectorXd& y_pred);
   
     Eigen::VectorXd call(const Eigen::VectorXd& inp);
-    void train_step(const Eigen::VectorXd& y, const Eigen::VectorXd& y_pred, const double& lr);
+    void train_step(const Eigen::VectorXd& y, const Eigen::VectorXd& y_pred, const double& lr, const bool& verbose);
 };
 
 #endif

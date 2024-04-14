@@ -44,9 +44,10 @@ Eigen::VectorXd NeuralNetwork::grad_mse(const Eigen::VectorXd& y, const Eigen::V
   return 2 * (y_pred - y)/y.size();
 }
 
-void NeuralNetwork::train_step(const Eigen::VectorXd& y, const Eigen::VectorXd& y_pred, const double& lr)
+void NeuralNetwork::train_step(const Eigen::VectorXd& y, const Eigen::VectorXd& y_pred, const double& lr, const bool& verbose)
 { 
-  std::cout << "Loss: " << mse(y, y_pred) << std::endl;
+  if (verbose)
+    std::cout << "Loss: " << mse(y, y_pred) << std::endl;
   
   Eigen::VectorXd error = grad_mse(y, y_pred);
   

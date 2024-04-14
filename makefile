@@ -2,7 +2,7 @@
 CXX = g++
 
 # Source files
-SRCS = src/main.cpp src/nn.cpp src/layer.cpp
+SRCS = src/titanic/train_titanic.cpp src/titanic/load_titanic.cpp src/nn.cpp src/layer.cpp
 
 # Target
 TARGET = nn_run
